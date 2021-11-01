@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components'
-import {flip} from 'react-animations';
+import {lightSpeedIn} from 'react-animations';
 import axios from "axios";
 import CardGlobal from './CardGlobal';
 
 export default function GlobalData() {
 
-    const Bounce = styled.div`animation: 5s ${keyframes`${flip}`}`;
+    const Bounce = styled.div`animation: 5s ${keyframes`${lightSpeedIn}`}`;
 
     const [CovidData, setCovidData] = useState([]);
     const reqData = async () => {
