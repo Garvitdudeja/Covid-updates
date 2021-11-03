@@ -8,16 +8,19 @@ const NavbarLg = () => {
             <div className=" bg-verdant-green text-mellow-yellow w-1/2 p-4 ">Covid Updates</div>
             <div className="flex flex-row justify-around w-full py-4 text-2xl">
                 <Link to="/" className="focus:text-mellow-yellow hover:text-mellow-yellow
-                hover:underline navbar-button">
+                hover:underline">
                 <h1>Home</h1>
                 </Link>
+                <Link to="/aboutMe" className="focus:text-mellow-yellow hover:text-mellow-yellow
+                hover:underline">
                 <h1>About Me</h1>
+                </Link>
                 <Link to="/projects" className="focus:text-mellow-yellow hover:text-mellow-yellow
-                hover:underline navbar-button">
+                hover:underline">
                 <h1>Projects</h1>
                 </Link>
                 <Link to="/contactUs" className="focus:text-mellow-yellow hover:text-mellow-yellow
-                hover:underline navbar-button">
+                hover:underline">
                 <h1>Contact Me</h1>
                 </Link>
             </div>
@@ -34,7 +37,7 @@ const NavbarSm = () => {
     <Navbar.Collapse id="navbar-dark-example" >
       <Nav>
           <NavDropdown.Item href="/" className="text-white hover:bg-blue-300 hover:text-black">Home</NavDropdown.Item>
-          <NavDropdown.Item href="#action/3.2"className="text-white hover:bg-blue-300 hover:text-black">About Me</NavDropdown.Item>
+          <NavDropdown.Item href="/aboutMe"className="text-white hover:bg-blue-300 hover:text-black">About Me</NavDropdown.Item>
           <NavDropdown.Item href="/projects"className="text-white hover:bg-blue-300 hover:text-black">Projects</NavDropdown.Item>
           <Link to="/contactUs"><NavDropdown.Item href="#action/3.3"className="text-white hover:bg-blue-300 hover:text-black">Contact Me</NavDropdown.Item></Link>
       </Nav>
