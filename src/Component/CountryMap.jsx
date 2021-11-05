@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 import axios from 'axios'
 
 export default function CountryMap(props) {
-    console.log(props.data);
+    
     var today = new Date(),
     date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate()-2);
     const stringDate = date.toString()

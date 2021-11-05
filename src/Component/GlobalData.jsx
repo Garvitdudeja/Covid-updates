@@ -29,7 +29,7 @@ export default function GlobalData() {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5vm5PIyNOaiAngnrd5bg6X5-3K5kWt-ZAA&usqp=CAU"
                     alt="earth" className="h-full w-full" />
             </div>
-            Global Data
+            Covid Cases In <span className="text-red-300">INDIA</span>
         </div>
         <Bounce>
             <div className="flex sm:block flex-row w-full p-10 gap-10 sm:gap-0" >

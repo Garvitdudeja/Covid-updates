@@ -5,12 +5,17 @@ import axios from 'axios';
 
 
 const DoughnutChart = () => {
+
   var today = new Date(),
   date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 2);
   const stringDate = date.toString()
   const [activeData, setactiveData] = useState([]);
   const reqData = async () => {
-    const getData = await axios.get(`IND/${stringDate}`);
+    var getData = { stringencyData: {
+      confirmed: "95",
+      deaths: "2"
+    }}
+    getData = await axios.get(`IND/${stringDate}`);
     setactiveData(getData.data.stringencyData)
   }
   useEffect(reqData,[]);
@@ -18,10 +23,10 @@ const DoughnutChart = () => {
   const Recovered = (activeData.confirmed / 100) * 98.22781;
 
   const deathPercent = (activeData.deaths/activeData.confirmed)*100;
-  const activePercent = (activeData.confirmed-activeData.deaths-Recovered)*100/activeData.confirmed;
+  const activePercent = (activeData.confirmed - activeData.deaths - Recovered)*100/activeData.confirmed;
   const recoveredPercent = (Recovered/activeData.confirmed)*100;
   const data = {
-    labels: ['Total Active Cases', 'Total Deaths', 'Total Recovered',],
+    labels: ['Total Active Cases', 'Total Deaths', 'Total Recovered'],
     datasets: [
       {
         label: '# of Votes',
