@@ -5,18 +5,21 @@ import axios from 'axios';
 
 
 const DoughnutChart = () => {
+  var today = new Date(),
+  date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate() - 2);
+  const stringDate = date.toString()
   const [activeData, setactiveData] = useState([]);
   const reqData = async () => {
-    const getData = await axios.get("v3/stats/worldometer/global");
-    setactiveData(getData.data)
+    const getData = await axios.get(`IND/${stringDate}`);
+    setactiveData(getData.data.stringencyData)
   }
   useEffect(reqData,[]);
 
+  const Recovered = (activeData.confirmed / 100) * 98.22781;
 
-  const total = activeData.totalActiveCases+activeData.totalRecovered+activeData.totalDeaths;
-  const deathPercent = (activeData.totalDeaths/total)*100;
-  const activePercent = (activeData.totalActiveCases/total)*100;
-  const recoveredPercent = (activeData.totalRecovered/total)*100;
+  const deathPercent = (activeData.deaths/activeData.confirmed)*100;
+  const activePercent = (activeData.confirmed-activeData.deaths-Recovered)*100/activeData.confirmed;
+  const recoveredPercent = (Recovered/activeData.confirmed)*100;
   const data = {
     labels: ['Total Active Cases', 'Total Deaths', 'Total Recovered',],
     datasets: [

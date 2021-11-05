@@ -7,7 +7,7 @@ import ContactsPage from "./Pages/ContactsPage";
 import AboutMePage from "./Pages/AboutMePage";
 
 
-axios.defaults.baseURL = "https://api.coronatracker.com/"
+axios.defaults.baseURL = "https://covidtrackerapi.bsg.ox.ac.uk/api/v2/stringency/actions/"
 axios.defaults.params = {};
 
 
