@@ -7,7 +7,7 @@ import CardGlobal from './CardGlobal';
 export default function GlobalData() {
 
     var today = new Date(),
-    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate()-1);
+    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate()-2);
     const stringDate = date.toString()
     const Bounce = styled.div`animation: 5s ${keyframes`${lightSpeedIn}`}`;
 
