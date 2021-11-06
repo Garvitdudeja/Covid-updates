@@ -7,7 +7,7 @@ import CardGlobal from './CardGlobal';
 export default function GlobalData() {
 
     var today = new Date(),
-    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate()-2);
+    date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + (today.getDate()-1);
     const stringDate = date.toString()
     const Bounce = styled.div`animation: 5s ${keyframes`${lightSpeedIn}`}`;
 
@@ -29,7 +29,7 @@ export default function GlobalData() {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY5vm5PIyNOaiAngnrd5bg6X5-3K5kWt-ZAA&usqp=CAU"
                     alt="earth" className="h-full w-full" />
             </div>
-            Covid Cases In <span className="text-red-300">INDIA</span>
+            Covid Cases <span className="sm:hidden"> In</span> &nbsp;<span className="text-red-300">INDIA</span>
         </div>
         <Bounce>
             <div className="flex sm:block flex-row w-full p-10 gap-10 sm:gap-0" >
