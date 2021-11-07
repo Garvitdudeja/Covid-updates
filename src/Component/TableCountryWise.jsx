@@ -25,7 +25,7 @@ export default function TableCountryWise() {
         <div className="text-center pt-5 flex  flex-col w-full justify-items-center">
             <h1 className="font-bold text-4xl sm:text-sm">Country Wise Covid Data</h1>
             <div>
-                <div className="flex sm:flex-col-reverse sm:justify-center md:flex-row sm:gap-5 sm:items-center justify-center pt-4 shadow-md  ">
+                <div className="flex sm:flex-col-reverse sm:justify-center md:flex-row-reverse sm:gap-5 sm:items-center justify-center pt-4 shadow-md  ">
                 <div className="sm:w-3/4 w-2/5 pl-10 pr-10 h-full">
                             <DoughnutChart />
                         </div>
